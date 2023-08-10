@@ -28,3 +28,6 @@ run the main playbook to execute the deployment and config process
 
 all the roles are tested for Ubuntu 20.04
 
+#Upadte the binary
+
+in order to update the binary update the URL in the group vars and run the playbook it will update the binaries and start the node again.
