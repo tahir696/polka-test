@@ -1,0 +1,10 @@
+[Unit]
+Description=Polkadot Validator
+
+[Service]
+ExecStart=/usr/local/bin/polkadot
+Restart=always
+RestartSec=120
+
+[Install]
+WantedBy=multi-user.target

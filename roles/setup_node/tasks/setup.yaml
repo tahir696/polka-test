@@ -1,0 +1,24 @@
+- name: Stop and disable firewall.
+  service:
+   name: ufw
+   state: stopped
+   enabled: False
+
+- name: create polkadot group
+  group:
+    name: polkadot
+    state: present
+
+- name: add polkadot user
+  user:
+    name: polkadot
+    group: polkadot
+    append: yes
+
+- name: create polkadot service file
+  template:
+    src: polkadot.service.j2
+    dest: /etc/systemd/system/polkadot.service
+    owner: root
+    group: root
+    mode: 0600

@@ -1,0 +1,11 @@
+- name: setup node
+  hosts: all
+  become: yes
+  roles:
+  - setup_node
+
+- name: deploy binary
+  hosts: all
+  become: yes
+  roles:
+  - deploy_binary

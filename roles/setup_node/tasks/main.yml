@@ -1,0 +1,4 @@
+---
+# tasks file for setup_node
+- name: perfrom basic setup
+  import_tasks: setup.yaml

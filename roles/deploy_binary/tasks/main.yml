@@ -1,0 +1,4 @@
+---
+# tasks file for deploy_binary
+- name: deploy binary
+  import_tasks: deploy-binary.yaml
